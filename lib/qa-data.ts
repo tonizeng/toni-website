@@ -70,7 +70,7 @@ const PROJECT_SUMMARY =
 const PROJECT_TIMELINE: ProjectItem[] = [
   {
     name: "spotSpot",
-    context: "CtrlHackDel 2024 @ York University",
+    context: "CtrlHackDel 2024 @ York University (3rd place)",
     description: "An acne detection classifier that identifies your acne type with the click of a button, providing tailored treatment options and guidance — skipping long physician lines or referrals, especially amid the growing shortage of doctors.",
     link: "https://github.com/tonizeng/spotSpot",
   },
