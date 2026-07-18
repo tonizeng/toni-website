@@ -235,7 +235,7 @@ export default function SearchExperience() {
           onKeyDown={handleKeyDown}
           onFocus={() => trimmed && setIsOpen(true)}
           onBlur={() => setIsOpen(false)}
-          placeholder="search about me, my work, projects, and experience..."
+          placeholder="search about me, my work, projects, experience, and more..."
           className={`w-full rounded-full border-2 border-brand-pink bg-white px-6 py-3 ${big ? "text-base" : "text-base"} text-zinc-800 placeholder:text-zinc-400 focus:border-brand-red focus:outline-none`}
         />
         {showDropdown && (
