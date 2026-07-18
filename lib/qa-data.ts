@@ -141,7 +141,7 @@ export const qaData: QAEntry[] = [
       "favourite things"
     ],
     answer:
-      "I'm currently in my **fourth year** of **Mechatronics Engineering** at the **University of Waterloo**. Throughout my degree, I've had the chance to explore different areas of engineering, but I found myself especially drawn to software because of how much room there is to **create**, **experiment**, and **solve problems in different way**.\n\n" +
+      "I'm currently in my **fourth year** of **Mechatronics Engineering** at the **University of Waterloo**. Throughout my degree, I've had the chance to explore different areas of engineering, but I found myself especially drawn to software because of how much room there is to **create**, **experiment**, and **solve problems in different ways**.\n\n" +
       "Outside of school and work, I enjoy travelling and staying active through various racket sports and pilates. In my downtime, I usually read, paint, or play games on my nintendo switch. My current read (inspired by the greek mythology course I'm currently taking) is The Song of Achilles.\n\n" +
       "I'm always looking for new ways to be **creative**, **learn**, and **challenge myself**, whether that means building something, picking up a new skill, or trying an unfamiliar activity. My latest goal is to learn how to knit.\n\n" +
       "Curious about more? Ask about my [plans after grad](ask:future-plans) or [why I chose software engineering](ask:why-software-engineering).",

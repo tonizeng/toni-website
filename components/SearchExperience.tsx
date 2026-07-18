@@ -235,8 +235,8 @@ export default function SearchExperience() {
           onKeyDown={handleKeyDown}
           onFocus={() => trimmed && setIsOpen(true)}
           onBlur={() => setIsOpen(false)}
-          placeholder="search about me, my work, projects, experience, and more..."
-          className={`w-full rounded-full border-2 border-brand-pink bg-white px-6 py-3 ${big ? "text-base" : "text-base"} text-zinc-800 placeholder:text-zinc-400 focus:border-brand-red focus:outline-none`}
+          placeholder="search about me, my work, projects & more..."
+          className={`w-full rounded-full border-2 border-brand-pink bg-white px-4 py-2.5 text-sm sm:px-6 sm:py-3 ${big ? "sm:text-base" : "sm:text-base"} text-zinc-800 placeholder:text-zinc-400 focus:border-brand-red focus:outline-none`}
         />
         {showDropdown && (
           <ul
@@ -251,7 +251,7 @@ export default function SearchExperience() {
                   onMouseDown={(e) => e.preventDefault()}
                   onClick={() => choose(entry)}
                   onMouseEnter={() => setHighlighted(i)}
-                  className={`block w-full px-6 py-3 text-left text-zinc-700 ${
+                  className={`block w-full px-4 py-2.5 text-left text-sm text-zinc-700 sm:px-6 sm:py-3 sm:text-base ${
                     i === highlighted ? "bg-brand-pink/20" : ""
                   }`}
                 >
@@ -315,7 +315,7 @@ export default function SearchExperience() {
   const paragraphsAfterImages = allParagraphs.slice(imageInsertIndex + 1);
 
   const answerBox = (isThinking || showAnswer) && (
-    <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-6 py-8 text-zinc-700">
+    <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-6 py-8 text-sm text-zinc-700 sm:text-base">
       {isThinking ? (
         <div className="flex items-center gap-2">
           <Image
@@ -325,7 +325,7 @@ export default function SearchExperience() {
             height={24}
             className="h-6 w-6 animate-octo-bounce [image-rendering:pixelated]"
           />
-          <span className="animate-shimmer text-base font-medium">
+          <span className="animate-shimmer text-sm font-medium sm:text-base">
             Thinking...
           </span>
         </div>
@@ -408,7 +408,7 @@ export default function SearchExperience() {
               className={
                 answerImages.length === 1
                   ? "mx-auto w-[280px]"
-                  : "mx-auto grid w-[600px] grid-cols-2 gap-3"
+                  : "mx-auto grid w-[220px] grid-cols-2 gap-2 sm:w-[600px] sm:gap-3"
               }
             >
               {answerImages.map(({ src, caption }) => (
@@ -444,11 +444,11 @@ export default function SearchExperience() {
 
   if (hasAskedOnce) {
     return (
-      <div className="flex min-h-0 flex-1 flex-col items-center bg-background px-6 py-8">
+      <div className="flex min-h-0 flex-1 flex-col items-center bg-background px-4 py-6 sm:px-6 sm:py-8">
         <main className="flex min-h-0 w-full max-w-2xl flex-1 flex-col">
           {answerBox}
-          <div className="mt-auto flex shrink-0 flex-col gap-4">
-            <div className="flex items-center gap-3">
+          <div className="mt-auto flex shrink-0 flex-col gap-3 sm:gap-4">
+            <div className="flex items-center gap-2 sm:gap-3">
               <div className="group relative shrink-0">
                 <button
                   type="button"
@@ -461,14 +461,14 @@ export default function SearchExperience() {
                     alt="Octopus icon"
                     width={32}
                     height={32}
-                    className="h-8 w-8 animate-octo-bounce [image-rendering:pixelated]"
+                    className="h-7 w-7 animate-octo-bounce [image-rendering:pixelated] sm:h-8 sm:w-8"
                   />
                 </button>
                 <span className="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 w-max -translate-x-1/2 whitespace-nowrap rounded-md bg-zinc-800 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100">
                   click to go home
                 </span>
               </div>
-              <div className="flex-1">{renderInputAndDropdown("up")}</div>
+              <div className="flex-1 pt-0.5">{renderInputAndDropdown("up")}</div>
             </div>
             {renderQuickButtons()}
           </div>
