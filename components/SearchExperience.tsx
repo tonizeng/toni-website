@@ -315,7 +315,7 @@ export default function SearchExperience() {
   const paragraphsAfterImages = allParagraphs.slice(imageInsertIndex + 1);
 
   const answerBox = (isThinking || showAnswer) && (
-    <div className="flex-1 overflow-y-auto overscroll-contain px-6 py-8 text-zinc-700">
+    <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-6 py-8 text-zinc-700">
       {isThinking ? (
         <div className="flex items-center gap-2">
           <Image
@@ -444,10 +444,10 @@ export default function SearchExperience() {
 
   if (hasAskedOnce) {
     return (
-      <div className="flex flex-1 flex-col items-center bg-background px-6 py-8">
-        <main className="flex w-full max-w-2xl flex-1 flex-col">
+      <div className="flex min-h-0 flex-1 flex-col items-center bg-background px-6 py-8">
+        <main className="flex min-h-0 w-full max-w-2xl flex-1 flex-col">
           {answerBox}
-          <div className="mt-auto flex flex-col gap-4">
+          <div className="mt-auto flex shrink-0 flex-col gap-4">
             <div className="flex items-center gap-3">
               <div className="group relative shrink-0">
                 <button
@@ -482,7 +482,7 @@ export default function SearchExperience() {
   }
 
   return (
-    <div className="flex flex-1 flex-col items-center bg-background px-6 pt-[25vh]">
+    <div className="flex min-h-0 flex-1 flex-col items-center overflow-y-auto bg-background px-6 pt-[25vh]">
       <main className="flex w-full max-w-2xl flex-col gap-4">
         <div className="flex items-center gap-3">
           <Image
